@@ -1,12 +1,123 @@
+/*
+Spacing
+This app uses an 8px unit. All spaces are a multiple of 8px:
+
+8px
+16px
+24px
+32px
+48px
+64px
+96px
+128px
+When it comes to max widths (e.g. the maximum width of the card), arbitrary values can be used.
+
+Font
+1 font is used in this project: Lato. It is already included in the stylesheet.
+
+For font sizes, the rem unit should be used.
+
+The scale is:
+
+1rem
+1.25rem
+1.5rem
+2rem
+By default, 1rem is equivalent to 16px.
+
+Color palette
+Primary (green):
+
+hsl(160deg, 100%, 30%)
+
+Secondary (gold):
+
+hsl(45deg, 100%, 50%) (lighter)
+hsl(45deg, 100%, 40%) (darker)
+Grays:
+
+hsl(0deg, 0%, 0%) (black)
+hsl(0deg, 0%, 10%) (very dark)
+hsl(0deg, 0%, 30%) (dark)
+hsl(0deg, 0%, 40%) (medium)
+hsl(0deg, 0%, 60%) (light)
+hsl(0deg, 0%, 100%) (white)
+*/
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  height: 100%;
 }
 
 /* Add styles here! */
+header,
+main {
+  height: 40%;
+  min-height: 200px;
+  overflow: auto;
+}
+
+header {
+  border-block-end: 4px solid hsl(0deg, 0%, 60%);
+}
+
+main {
+  height: 60%;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 30%);
+  padding-block-start: 64px;
+}
+
+strong {
+  color: hsl(160deg, 100%, 30%);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.intro-chunk {
+  padding-block-start: 64px;
+  width: 355px;
+  padding-inline: 16px;
+}
+
+.title {
+  padding-block-end: 48px;
+}
+
+.intro-chunk p:last-child {
+  padding-block-start: 16px;
+}
+
+.card {
+  background-color: white;
+  padding: 16px;
+  border-block-end: 4px solid hsl(0deg, 0%, 60%);
+}
+
+.indented-heading {
+  padding: 8px 24px;
+  background-color: hsl(45deg, 100%, 50%);
+  width: fit-content;
+  border-block-end: 4px solid hsl(45deg, 100%, 40%);
+  margin-block-start: -8px;
+  margin-inline-start: -24px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  padding-block: 8px;
+}
